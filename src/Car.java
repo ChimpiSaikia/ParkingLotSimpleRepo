@@ -1,21 +1,6 @@
-import java.util.ArrayList;
+public class Car extends Vehicle {
 
-public class Car {
-
-    String registrationNumber;
-    String type;
-
-
-    public void park(ParkingLot parkingLot){
-
-       parkingLot.addCar();
+    public Car(String name) {
+        super(name);
     }
-
-    public void Unpark(ParkingLot parkingLot){
-
-        parkingLot.removeCar();
-    }
-
-
-
 }

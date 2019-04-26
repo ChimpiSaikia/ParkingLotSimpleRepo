@@ -2,17 +2,21 @@ public class Main {
 
     public static void main(String args[])
     {
-        Car car1 = new Car();
-        ParkingLot parkingLot= new ParkingLot(2);
-        car1.park(parkingLot);
 
-        Car car2 = new Car();
+        Vehicle car1 = new Car("Car1");
+        Vehicle car2 = new Car("Car2");
+        Vehicle jeep1 = new Jeep("Jeep1");
+        Vehicle jeep2 = new Jeep("Jeep2");
+        ParkingLot parkingLot= new ParkingLot(3);
+
+        car1.park(parkingLot);
         car2.park(parkingLot);
-        //if (parkingLot.isFull())
-       // {
-        //    System.out.println("Parking is full");
-        //};
-        parkingLot.isFull();
+        jeep1.park(parkingLot);
+        jeep2.park(parkingLot);
+        car1.unpark(parkingLot);
+        jeep1.unpark(parkingLot);
+
+
 
     }
 }

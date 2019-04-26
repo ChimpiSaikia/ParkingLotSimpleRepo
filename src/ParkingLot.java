@@ -15,19 +15,26 @@ public class ParkingLot {
         }
         else
         {
-            System.out.println("Parking is available");
             return false;
         }
     }
 
-    public void addCar()
+    public void addVehicle()
     {
-        Capacity--;
+
+        if(!isFull()) {
+            Capacity--;
+            System.out.println("Parking is available");
+        }
+        else
+            System.out.println("Parking not available");
+
     }
 
-    public void removeCar()
+    public void removeVehicle()
     {
         Capacity++;
+        System.out.println("Availability after unparking is "+Capacity);
     }
 
 }
